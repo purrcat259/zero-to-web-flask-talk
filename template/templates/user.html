@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>User Homepage</h1>
+    <p>{{ data.user.name }} is <span>{{ data.user.age }}</span> years old</p>
+    <a href="{{ url_for('user_list') }}">Return to users</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>Index</h1>
+    <p>This is our awesome website</p>
+    <ul>
+        <li>
+            <a href="{{ url_for('user_list') }}">Users</a>
+        </li>
+    </ul>
+{% endblock %}

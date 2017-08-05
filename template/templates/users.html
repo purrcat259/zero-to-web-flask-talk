@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>Users</h1>
+    <ul>
+        {% for user in data.users %}
+            <li>{{ user.name }}: {{ user.age }}, <a href="{{ url_for('user', username=user.username) }}">Page here</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Return to index page</a>
+{% endblock %}
