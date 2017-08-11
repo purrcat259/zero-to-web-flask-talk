@@ -23,14 +23,14 @@ def index():
     return 'This is the home page'
 
 
-@app.route('/user/<name>')
+@app.route('/user/<username>')
 def user(username=None):
     # this checks if the username is in ['simonam', 'rachelf'] or if it is not provided
     if username not in usernames or username is None:
         abort(404)
     return 'This is the homepage for {}, age: {}'.format(
-        username['name'],
-        username['age']
+        users[username]['name'],
+        users[username]['age']
     )
 
 

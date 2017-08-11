@@ -29,10 +29,10 @@ def index():
 
 
 @app.route('/api/v1/users')
-def users():
+def users_list():
     return jsonify(
         {
-            'usernames': usernames
+            'usernames': list(usernames)
         }
     )
 
